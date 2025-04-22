@@ -79,7 +79,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   color: white;
-  background-image: url("./public/images/close-up-image-programer-working-his-desk-office.jpg");
+  background-image: url("./images/close-up-image-programer-working-his-desk-office.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -210,6 +210,10 @@ footer {
   width: 40px;
   object-fit: contain;
   margin-top: 10px;
+}
+
+.btn-mobile {
+  display: none;
 }
 
 .proyects {
@@ -404,10 +408,6 @@ footer {
 /*------MEDIA QUERIES DE NAVBAR-------*/
 
 @media (max-width: 768px) {
-  #btn-mobile {
-    display: block;
-  }
-
   #menu {
     position: absolute;
     width: 100%;
@@ -435,13 +435,14 @@ footer {
     border-bottom: 2px solid #afbfc0;
   }
 
-  #btn-mobile {
-    display: flex;
+  .btn-mobile {
+    display: block;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
     cursor: pointer;
     gap: 0.5rem;
+    background-color: #020613;
   }
 
   #hambuguer {

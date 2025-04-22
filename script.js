@@ -1,35 +1,35 @@
 const proyects = [
   {
     nombre: "Landing Spotify",
-    image: "./public/images/Landing-Spotify.jpeg",
+    image: "./images/Landing-Spotify.jpeg",
     repositorio: "https://github.com/cpasquali/Landing-Spotify",
     tecnologias: ["HTML", "CSS"],
     deploy: "https://landing-spotify.vercel.app/",
   },
   {
     nombre: "Conifly",
-    image: "./public/images/Conifly.jpeg",
+    image: "./images/Conifly.jpeg",
     repositorio: "https://github.com/cpasquali/Conifly",
     tecnologias: ["HTML", "CSS", "SASS", "Bootstrap"],
     deploy: "https://conifly.netlify.app/",
   },
   {
     nombre: "Cinemania",
-    image: "./public/images/Cinemania.jpeg",
+    image: "./images/Cinemania.jpeg",
     repositorio: "https://github.com/cpasquali/Cinemania",
     tecnologias: ["React", "CSS", "Tailwind", "Api TMDb"],
     deploy: "https://cinemania-umber.vercel.app/",
   },
   {
     nombre: "Pokeviewer",
-    image: "./public/images/Pokeviewer.jpeg",
+    image: "./images/Pokeviewer.jpeg",
     repositorio: "https://github.com/cpasquali/Pokeviewer",
     tecnologias: ["React", "CSS", "Bootstrap", "Api Pokeapi"],
     deploy: "https://poke-viewer.vercel.app/",
   },
   {
     nombre: "Musical Instrument Simulator",
-    image: "./public/images/Musical-Instrument-Simulator.jpeg",
+    image: "./images/Musical-Instrument-Simulator.jpeg",
     repositorio: "https://github.com/cpasquali/Musical-instrument-simulator",
     tecnologias: ["React", "CSS", "Tone.js"],
     deploy: "https://musical-instrument-simulator.vercel.app/",
@@ -58,7 +58,7 @@ const renderProyects = () => {
       <div class="card-tec">
         ${proyect.tecnologias
           .map((tec) => {
-            return ` <img src="./public/images/${imageTecnology(
+            return ` <img src="./images/${imageTecnology(
               tec
             )}.png" alt="tailwind-logo"/>`;
           })
