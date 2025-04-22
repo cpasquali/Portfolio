@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portolio</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar" id="nav">
+        <img src="./public/images/CP DEVELOPER (2).png" alt="imagen favicon" />
+        <buttton
+          id="btn-mobile"
+          aria-label="Abrir menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span id="hambuguer"></span>
+        </buttton>
+        <ul class="items-menu" id="menu">
+          <li><a href="#inicio" class="nav-a">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-a">Sobre mi</a></li>
+          <li><a href="#proyects" class="nav-a">Proyectos</a></li>
+          <li><a href="#contact" class="nav-a">Contactame</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="fade-in">
+      <section class="initial-banner" id="inicio">
+        <h1>¡Bienvenido a mi mundo digital!</h1>
+        <p>
+          Soy Constantino Pasquali, un apasionado por la tecnología y el
+          desarrollo web.
+        </p>
+      </section>
+      <section class="about-me" id="sobre-mi">
+        <h2>SOBRE MI</h2>
+        <div>
+          <p>
+            ¡Hola! Mi nombre es <strong>Constantino Pasquali</strong>, soy de
+            Villa Ramallo, Provincia de Buenos Aires, Argentina. Estudié la
+            carrera de <strong>Técnico Superior en Programación</strong> en la
+            UTN de San Nicolás de los Arroyos, y actualmente me encuentro
+            finalizando el <strong>trabajo final</strong> para obtener el
+            título.
+          </p>
+          <p>
+            A lo largo de estos últimos años he adquirido conocimientos tanto en
+            la carrera como en cursos complementarios, aprendiendo y practicando
+            con tecnologías como
+            <strong>HTML</strong>, <strong>CSS</strong>,
+            <strong>JavaScript</strong>, <strong>React</strong>,
+            <strong>SQL Server</strong>,<strong>My SQL</strong>,
+            <strong>C++</strong>, <strong>C#</strong>,
+            <strong>Bootstrap</strong> y <strong>SASS</strong>.
+          </p>
+        </div>
+        <section class="lenguaje-container">
+          <h3>Lenguajes usados en mis proyectos</h3>
+          <section class="lenguajes">
+            <img src="./public/images/HTML.png" alt="html-logo" />
+            <img src="./public/images/CSS.png" alt="css-logo" />
+            <img src="./public/images/Bootstrap.png" alt="boostrap-logo" />
+            <img src="./public/images/Tailwind.png" alt="tailwind-logo" />
+            <img src="./public/images/SASS.png" alt="sass-logo" />
+            <img src="./public/images/Java-Script.png" alt="js-logo" />
+            <img src="./public/images/React.png" alt="react-logo" />
+            <img src="./public/images/MySql.png" alt="mysql-logo" />
+          </section>
+        </section>
+      </section>
+      <section class="proyects-container">
+        <h2>MIS PROYECTOS</h2>
+        <section class="proyects" id="proyects"></section>
+      </section>
+      <section class="contact" id="contact">
+        <h2>CONTACTAME</h2>
+        <form class="form" id="formulario-contacto">
+          <div class="input-container">
+            <input type="text" id="input" name="name" required="" />
+            <label for="input" class="label">Ingresar Nombre</label>
+            <div class="underline"></div>
+          </div>
+          <div class="input-container">
+            <input type="text" id="input" name="title" required="" />
+            <label for="input" class="label">Asunto</label>
+            <div class="underline"></div>
+          </div>
+          <div class="input-container">
+            <input type="text" id="input" name="message" required="" />
+            <label for="input" class="label">Consulta</label>
+            <div class="underline"></div>
+          </div>
+          <button type="submit" class="btn-form">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a
+        class="icon"
+        href="https://github.com/cpasquali?tab=repositories"
+        target="_blank"
+        ><ion-icon name="logo-github"></ion-icon
+      ></a>
+      <a
+        class="icon"
+        href="https://www.linkedin.com/in/constantino-pasquali-6219922a5/"
+        target="_blank"
+        ><ion-icon name="logo-linkedin"></ion-icon
+      ></a>
+      <a
+        class="icon"
+        href="https://www.instagram.com/coni.pasquali/"
+        target="_blank"
+      >
+        <ion-icon name="logo-instagram"></ion-icon
+      ></a>
+    </footer>
+    <script src="./script.js" type="module"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </body>
+</html>
