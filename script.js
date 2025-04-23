@@ -44,7 +44,7 @@ const proyects = [
 
 const imageTecnology = (tec) => {
   return tec.startsWith("Api")
-    ? "Api"
+    ? "api"
     : tec.includes(".js")
     ? "Java-Script"
     : tec;
