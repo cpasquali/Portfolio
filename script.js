@@ -104,7 +104,11 @@ formEl.addEventListener("submit", async function (e) {
 
   try {
     const response = await emailjs.sendForm(serviceID, templateID, this);
-    alert("¡Mensaje enviado con éxito!", response);
+    const messageSendEl = document.getElementById("message-send");
+    messageSendEl.textContent = "Mensaje enviado con exito!!";
+    setTimeout(() => {
+      messageSendEl.textContent = "";
+    }, 3000);
     formEl.reset();
   } catch {
     alert(
