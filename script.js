@@ -34,6 +34,12 @@ const proyects = [
     tecnologias: ["React", "CSS", "Tone.js"],
     deploy: "https://musical-instrument-simulator.vercel.app/",
   },
+  {
+    nombre: "RedditClone Backend",
+    image: "./images/redditclone.jpeg",
+    repositorio: "https://github.com/cpasquali/RedditClone-Backend",
+    tecnologias: ["Csharp", "SqlServer"],
+  },
 ];
 
 const imageTecnology = (tec) => {
@@ -66,12 +72,14 @@ const renderProyects = () => {
       </div>
       <div class="btn-card-container">
         <a href="${
-          proyect.deploy
-        }" class="btn-card" target="_blank"><ion-icon name="globe-outline"></ion-icon></a>
-        <a href="${
           proyect.repositorio
-        }" class="btn-card" target="_blank"><ion-icon name="logo-github"></ion-icon
-            ></a>
+        }" class="btn-card" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+        ${
+          proyect.hasOwnProperty("deploy")
+            ? `<a href="${proyect.deploy}" class="btn-card" target="_blank"><ion-icon name="globe-outline"></ion-icon
+              ></a>`
+            : ""
+        }
       </div>
     </div>
   </article>
