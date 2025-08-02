@@ -9,24 +9,27 @@
   <body>
     <header id="header">
       <nav class="navbar" id="nav">
-        <img src="./images/logo.png" alt="imagen favicon" />
-        <button
-          id="btn-mobile"
-          class="btn-mobile"
-          aria-label="Abrir menu"
-          aria-haspopup="true"
-          aria-controls="menu"
-          aria-expanded="false"
-        >
-          <span id="hambuguer"></span>
-        </button>
+        <section class="nav-top">
+          <img src="./images/logo.png" alt="icono de la nav" />
+          <button
+            id="btn-mobile"
+            class="btn-mobile"
+            aria-label="Abrir menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            <span id="hamburguer"></span>
+          </button>
+        </section>
+
         <ul class="items-menu" id="menu">
           <li><a href="#inicio" class="nav-a">Inicio</a></li>
           <li><a href="#sobre-mi" class="nav-a">Sobre mi</a></li>
           <li><a href="#proyects" class="nav-a">Proyectos</a></li>
           <li><a href="#contact" class="nav-a">Contactame</a></li>
           <li>
-            <a class="nav-a" href="./docs/CV-Constantino-Pasquali.pdf"
+            <a class="nav-a" href="./docs/CV_Constantino_Pasquali.pdf"
               >Mas Info sobre mi</a
             >
           </li>
@@ -89,7 +92,7 @@
           <div class="input-container">
             <input
               type="text"
-              id="input"
+              id="inputName"
               name="name"
               required=""
               autocomplete="off"
@@ -100,7 +103,7 @@
           <div class="input-container">
             <input
               type="text"
-              id="input"
+              id="inputTitle"
               name="title"
               required=""
               autocomplete="off"
@@ -111,7 +114,7 @@
           <div class="input-container">
             <input
               type="text"
-              id="input"
+              id="inputMessage"
               name="message"
               required=""
               autocomplete="off"

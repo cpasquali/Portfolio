@@ -91,9 +91,9 @@ const renderProyects = () => {
 
 renderProyects();
 
-const serviceID = "service_w7mdhlk";
-const templateID = "template_54acddo";
-const publicKey = "STrbs3B26pFLH6PFd";
+const serviceID = "service_pcvstt6";
+const templateID = "template_dwy41t4";
+const publicKey = "yKzh8RpzVSy0OquS5";
 
 emailjs.init(publicKey);
 
@@ -101,16 +101,25 @@ const formEl = document.getElementById("formulario-contacto");
 
 formEl.addEventListener("submit", async function (e) {
   e.preventDefault();
+  const inputNameEl = document.getElementById("inputName");
+  const inputTitleEl = document.getElementById("inputTitle");
+  const inputMessageEl = document.getElementById("inputMessage");
 
   try {
-    const response = await emailjs.sendForm(serviceID, templateID, this);
+    await emailjs.send(serviceID, templateID, {
+      name: inputNameEl.value,
+      title: inputTitleEl.value,
+      message: inputMessageEl.value,
+    });
+
     const messageSendEl = document.getElementById("message-send");
     messageSendEl.textContent = "Mensaje enviado con exito!!";
     setTimeout(() => {
       messageSendEl.textContent = "";
     }, 3000);
     formEl.reset();
-  } catch {
+  } catch (e) {
+    console.error("EmailJS error:", e);
     alert(
       "Ocurrió un error al enviar el mensaje. Por favor, intenta de nuevo."
     );
@@ -123,18 +132,16 @@ window.addEventListener("load", () => {
 
 const btnMobile = document.getElementById("btn-mobile");
 
-function toggleMenu(event) {
-  if (event.type === "touchstart") event.preventDefault();
-  const nav = document.getElementById("nav");
-  nav.classList.toggle("active");
-  const active = nav.classList.contains("active");
-  event.currentTarget.setAttribute("aria-expanded", active);
-  if (active) {
-    event.currentTarget.setAttribute("aria-label", "Fechar Menu");
+function toggleMenu() {
+  const menuEl = document.getElementById("menu");
+  const navEl = document.getElementById("nav");
+  if (menuEl.className.includes("active")) {
+    menuEl.classList.remove("active");
+    navEl.classList.remove("active");
   } else {
-    event.currentTarget.setAttribute("aria-label", "Abrir Menu");
+    menuEl.classList.add("active");
+    navEl.classList.add("active");
   }
 }
 
 btnMobile.addEventListener("click", toggleMenu);
-btnMobile.addEventListener("touchstart", toggleMenu);

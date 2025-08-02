@@ -59,6 +59,9 @@ footer {
 .icon {
   color: #ffffff;
   font-size: 56px;
+  &:hover {
+    color: #0dc7e3;
+  }
 }
 
 .nav-a::after {
@@ -153,6 +156,8 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .lenguajes img {
@@ -409,50 +414,49 @@ footer {
 /*------MEDIA QUERIES DE NAVBAR-------*/
 
 @media (max-width: 768px) {
-  #menu {
-    position: absolute;
+  .navbar {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar.active {
+    height: 100vh;
+  }
+
+  .nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    top: 70px;
-    right: 0;
-    display: block;
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+
+  .items-menu {
+    display: none;
+  }
+
+  .items-menu.active {
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    padding-bottom: 300px;
     background-color: #020613;
-    height: 0;
-    z-index: 1000;
-    transition: 0.6s;
-    visibility: hidden;
-    overflow-y: hidden;
-  }
-
-  #nav.active #menu {
-    display: block;
-    visibility: visible;
-    height: calc(100vh - 70px);
-    overflow-y: auto;
-  }
-
-  #menu a {
-    padding: 1rem 0;
-    margin: 0.5rem;
-    border-bottom: 2px solid #afbfc0;
   }
 
   .btn-mobile {
-    display: block;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    gap: 0.5rem;
+    display: flex;
     background-color: #020613;
+    border: none;
   }
 
-  #hambuguer {
+  #hamburguer {
     border-top: 2px solid;
     width: 20px;
   }
 
-  #hambuguer::before,
-  #hambuguer::after {
+  #hamburguer::before,
+  #hamburguer::after {
     content: "";
     display: block;
     width: 20px;
@@ -463,17 +467,21 @@ footer {
     position: relative;
   }
 
-  #nav.active #hambuguer {
+  #nav.active #hamburguer {
     border-top-color: transparent;
   }
 
-  #nav.active #hambuguer::before {
+  #nav.active #hamburguer::before {
     transform: rotate(135deg);
   }
 
-  #nav.active #hambuguer::after {
+  #nav.active #hamburguer::after {
     transform: rotate(-135deg);
     top: -7px;
+  }
+
+  .initial-banner {
+    margin-top: 60px;
   }
 }
 
