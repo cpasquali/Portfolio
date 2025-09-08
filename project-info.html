@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar" id="nav">
+        <section class="nav-top">
+          <img src="./images/logo.png" alt="icono de la nav" />
+          <button
+            id="btn-mobile"
+            class="btn-mobile"
+            aria-label="Abrir menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            <span id="hamburguer"></span>
+          </button>
+        </section>
+
+        <ul class="items-menu" id="menu">
+          <li><a href="./index.html" class="nav-a">Inicio</a></li>
+          <li>
+            <a class="nav-a" href="./docs/CV_Constantino_Pasquali.pdf"
+              >Mas Info sobre mi</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="project-info" id="main"></main>
+    <script src="./project-info.js" type="module"></script>
+  </body>
+</html>

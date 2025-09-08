@@ -1,46 +1,4 @@
-const proyects = [
-  {
-    nombre: "Landing Spotify",
-    image: "./images/Landing-Spotify.jpeg",
-    repositorio: "https://github.com/cpasquali/Landing-Spotify",
-    tecnologias: ["HTML", "CSS"],
-    deploy: "https://landing-spotify.vercel.app/",
-  },
-  {
-    nombre: "Conifly",
-    image: "./images/Conifly.jpeg",
-    repositorio: "https://github.com/cpasquali/Conifly",
-    tecnologias: ["HTML", "CSS", "SASS", "Bootstrap"],
-    deploy: "https://conifly.netlify.app/",
-  },
-  {
-    nombre: "Cinemania",
-    image: "./images/Cinemania.jpeg",
-    repositorio: "https://github.com/cpasquali/Cinemania",
-    tecnologias: ["React", "CSS", "Tailwind", "Api TMDb"],
-    deploy: "https://cinemania-umber.vercel.app/",
-  },
-  {
-    nombre: "Pokeviewer",
-    image: "./images/Pokeviewer.jpeg",
-    repositorio: "https://github.com/cpasquali/Pokeviewer",
-    tecnologias: ["React", "CSS", "Bootstrap", "Api Pokeapi"],
-    deploy: "https://poke-viewer.vercel.app/",
-  },
-  {
-    nombre: "Musical Instrument Simulator",
-    image: "./images/Musical-Instrument-Simulator.jpeg",
-    repositorio: "https://github.com/cpasquali/Musical-instrument-simulator",
-    tecnologias: ["React", "CSS", "Tone.js"],
-    deploy: "https://musical-instrument-simulator.vercel.app/",
-  },
-  {
-    nombre: "RedditClone Backend",
-    image: "./images/redditclone.jpeg",
-    repositorio: "https://github.com/cpasquali/RedditClone-Backend",
-    tecnologias: ["Csharp", "SqlServer"],
-  },
-];
+import { projects } from "./data/projects.js";
 
 const imageTecnology = (tec) => {
   return tec.startsWith("Api")
@@ -50,46 +8,48 @@ const imageTecnology = (tec) => {
     : tec;
 };
 
-const renderProyects = () => {
-  const proyectsSectionEl = document.getElementById("proyects");
-  let proyectCard = proyects
-    .map((proyect) => {
+const renderProjects = () => {
+  const projectsSectionEl = document.getElementById("projects");
+  let projectsCard = projects
+    .map((projects) => {
       return `
-  <article class="proyect-card">
-    <img class="proyect-image" src="${proyect.image}" alt="foto de proyecto ${
-        proyect.nombre
-      } ">
-    <div class="card-info">
-      <h2>${proyect.nombre}</h2>
+      <article class="projects-card">
+        <img onclick="location.href='project-info.html?name=${
+          projects.name
+        }'" class="projects-image" src="${
+        projects.image
+      }  " alt="foto de projectso ${projects.name} ">
+      <div class="card-info">
+      <h2>${projects.name}</h2>
       <div class="card-tec">
-        ${proyect.tecnologias
+        ${projects.technologies
           .map((tec) => {
-            return ` <img src="./images/${imageTecnology(
-              tec
-            )}.png" alt="tailwind-logo"/>`;
+            return ` <img class="${
+              tec === "expressjs" && "background-image card"
+            }" src="./images/${imageTecnology(tec)}.png" alt="tailwind-logo"/>`;
           })
           .join(" ")}
       </div>
-      <div class="btn-card-container">
-        <a href="${
-          proyect.repositorio
-        }" class="btn-card" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-        ${
-          proyect.hasOwnProperty("deploy")
-            ? `<a href="${proyect.deploy}" class="btn-card" target="_blank"><ion-icon name="globe-outline"></ion-icon
-              ></a>`
-            : ""
-        }
+        <div class="btn-card-container">
+          <a href="${
+            projects.repository
+          }" class="btn-card" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+          ${
+            projects.hasOwnProperty("deploy")
+              ? `<a href="${projects.deploy}" class="btn-card" target="_blank"><ion-icon name="globe-outline"></ion-icon
+                ></a>`
+              : ""
+          }
+        </div>
       </div>
-    </div>
-  </article>
+      </article> 
   `;
     })
     .join(" ");
-  proyectsSectionEl.innerHTML = proyectCard;
+  projectsSectionEl.innerHTML = projectsCard;
 };
 
-renderProyects();
+renderProjects();
 
 const serviceID = "service_pcvstt6";
 const templateID = "template_dwy41t4";

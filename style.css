@@ -166,29 +166,36 @@ footer {
   object-fit: contain;
 }
 
-.proyects-container {
+.background-image {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.projects-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 }
 
-.proyects-container h2 {
+.projects-container h2 {
   color: #0dc7e3;
 }
 
-.proyect-card {
+.projects-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: space-evenly;
   height: 250px;
   width: 380px;
   padding-bottom: 300px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
-.proyect-card img {
+.projects-card img {
   height: 280px;
   width: 380px;
   object-fit: contain;
@@ -212,8 +219,8 @@ footer {
 }
 
 .card-tec img {
-  height: 52px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   object-fit: contain;
   margin-top: 10px;
 }
@@ -222,7 +229,7 @@ footer {
   display: none;
 }
 
-.proyects {
+.projects {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -362,9 +369,55 @@ footer {
   transform: translateY(0);
 }
 
+.project-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #ffffff;
+  border-radius: 15px;
+}
+
+.project-info-container img {
+  width: 100%;
+  max-width: 1200px;
+  object-fit: cover;
+}
+
+.project-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  gap: 20px;
+}
+
+.project-data h2 {
+  font-size: 2.8rem;
+  color: #0dc7e3;
+  text-align: center;
+}
+
+.project-data p {
+  font-size: 22px;
+  color: #ddd;
+  text-align: center;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
-  .proyects {
+  .projects {
     width: 100%;
+  }
+
+  .background-image.card {
+    width: 50px;
+    height: 50px;
   }
 
   .initial-banner p,
@@ -374,7 +427,7 @@ footer {
     text-align: center;
   }
 
-  .proyects-container {
+  .projects-container {
     margin-top: 20px;
   }
 
@@ -386,13 +439,8 @@ footer {
     width: 250px;
   }
 
-  .proyect-card img {
+  .projects-card img {
     width: 100%;
-  }
-
-  .card-tec img {
-    height: 50px;
-    width: 38px;
   }
 
   .card-info h2 {
@@ -401,7 +449,7 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  .proyects {
+  .projects {
     width: 100%;
   }
 
