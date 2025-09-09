@@ -9,20 +9,6 @@
   <body>
     <header id="header">
       <nav class="navbar" id="nav">
-        <section class="nav-top">
-          <img src="./images/logo.png" alt="icono de la nav" />
-          <button
-            id="btn-mobile"
-            class="btn-mobile"
-            aria-label="Abrir menu"
-            aria-haspopup="true"
-            aria-controls="menu"
-            aria-expanded="false"
-          >
-            <span id="hamburguer"></span>
-          </button>
-        </section>
-
         <ul class="items-menu" id="menu">
           <li><a href="#inicio" class="nav-a">Inicio</a></li>
           <li><a href="#sobre-mi" class="nav-a">Sobre mi</a></li>
@@ -43,6 +29,26 @@
           Soy Constantino Pasquali, un apasionado por la tecnología y el
           desarrollo web.
         </p>
+        <section class="social-container">
+          <article class="social-card github">
+            <ion-icon name="logo-github"></ion-icon>
+            <a href="https://github.com/cpasquali" target="_blank">Github</a>
+          </article>
+          <article class="social-card instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <a href="https://www.instagram.com/coni.pasquali/" target="_blank"
+              >Instagram</a
+            >
+          </article>
+          <article class="social-card linkedin">
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <a
+              href="https://www.linkedin.com/in/constantino-pasquali-6219922a5/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </article>
+        </section>
       </section>
       <section class="about-me" id="sobre-mi">
         <h2>SOBRE MI</h2>
@@ -67,7 +73,7 @@
           </p>
         </div>
         <section class="lenguaje-container">
-          <h3>Lenguajes usados en mis proyectos</h3>
+          <h2>Lenguajes usados en mis proyectos</h2>
           <section class="lenguajes">
             <img src="./images/HTML.png" alt="html-logo" />
             <img src="./images/CSS.png" alt="css-logo" />
@@ -127,32 +133,11 @@
             <label for="input" class="label">Consulta</label>
             <div class="underline"></div>
           </div>
-          <p id="message-send" class="message-form-send-alert"></p>
+          <p id="message-send"></p>
           <button type="submit" class="btn-form">Enviar</button>
         </form>
       </section>
     </main>
-    <footer>
-      <a
-        class="icon"
-        href="https://github.com/cpasquali?tab=repositories"
-        target="_blank"
-        ><ion-icon name="logo-github"></ion-icon
-      ></a>
-      <a
-        class="icon"
-        href="https://www.linkedin.com/in/constantino-pasquali-6219922a5/"
-        target="_blank"
-        ><ion-icon name="logo-linkedin"></ion-icon
-      ></a>
-      <a
-        class="icon"
-        href="https://www.instagram.com/coni.pasquali/"
-        target="_blank"
-      >
-        <ion-icon name="logo-instagram"></ion-icon
-      ></a>
-    </footer>
     <script src="./script.js" type="module"></script>
     <script
       type="module"

@@ -1,8 +1,8 @@
 export const projects = [
   {
     name: "Landing Spotify",
-    image: "./images/Landing-Spotify.jpeg",
-    repository: "https://github.com/cpasquali/Landing-Spotify",
+    images: ["https://i.postimg.cc/JhxHgScH/Landing-Spotify.jpg"],
+    repository: ["https://github.com/cpasquali/Landing-Spotify"],
     technologies: ["HTML", "CSS"],
     deploy: "https://landing-spotify.vercel.app/",
     resume:
@@ -10,8 +10,8 @@ export const projects = [
   },
   {
     name: "Conifly",
-    image: "./images/Conifly.jpeg",
-    repository: "https://github.com/cpasquali/Conifly",
+    images: ["https://i.postimg.cc/fWrmMn4x/Conifly.jpg"],
+    repository: ["https://github.com/cpasquali/Conifly"],
     technologies: ["HTML", "CSS", "SASS", "Bootstrap"],
     deploy: "https://conifly.netlify.app/",
     resume:
@@ -19,8 +19,8 @@ export const projects = [
   },
   {
     name: "Cinemania",
-    image: "./images/Cinemania.jpeg",
-    repository: "https://github.com/cpasquali/Cinemania",
+    images: ["https://i.postimg.cc/HnRyz50S/Cinemania.jpg"],
+    repository: ["https://github.com/cpasquali/Cinemania"],
     technologies: ["React", "CSS", "Tailwind", "Api TMDb"],
     deploy: "https://cinemania-umber.vercel.app/",
     resume:
@@ -28,8 +28,8 @@ export const projects = [
   },
   {
     name: "Pokeviewer",
-    image: "./images/Pokeviewer.jpeg",
-    repository: "https://github.com/cpasquali/Pokeviewer",
+    images: ["https://i.postimg.cc/YCcFm6C0/Pokeviewer.jpg"],
+    repository: ["https://github.com/cpasquali/Pokeviewer"],
     technologies: ["React", "CSS", "Bootstrap", "Api Pokeapi"],
     deploy: "https://poke-viewer.vercel.app/",
     resume:
@@ -37,8 +37,8 @@ export const projects = [
   },
   {
     name: "Musical Instrument Simulator",
-    image: "./images/Musical-Instrument-Simulator.jpeg",
-    repository: "https://github.com/cpasquali/Musical-instrument-simulator",
+    images: ["https://i.postimg.cc/Kv3LzqFC/Musical-Instrument-Simulator.jpg"],
+    repository: ["https://github.com/cpasquali/Musical-instrument-simulator"],
     technologies: ["React", "CSS", "Tone.js"],
     deploy: "https://musical-instrument-simulator.vercel.app/",
     resume:
@@ -46,16 +46,26 @@ export const projects = [
   },
   {
     name: "RedditClone Backend",
-    image: "./images/redditclone.jpeg",
-    repository: "https://github.com/cpasquali/RedditClone-Backend",
+    images: ["https://i.postimg.cc/d0wT5JdK/redditclone.png"],
+    repository: ["https://github.com/cpasquali/RedditClone-Backend"],
     technologies: ["Csharp", "SqlServer"],
     resume:
       "RedditClone es un proyecto orientado a la programacion backend que consiste en una API desarrollada con ASP.NET Core, diseñada para replicar las funcionalidades básicas de Reddit, incluyendo publicaciones, usuarios, comentarios, likes y autenticación de usuarios (registro e inicio de sesión).",
   },
   {
     name: "Conecta",
-    image: "./images/conecta.jpeg",
-    repository: "https://github.com/cpasquali/Conecta-FrontEnd",
+    images: [
+      "https://i.postimg.cc/d3LCGnCk/conecta.png",
+      "https://i.postimg.cc/bwNTmXtW/conecta-home.png",
+      "https://i.postimg.cc/tCzkdRYF/conecta-createpost.png",
+      "https://i.postimg.cc/bwCRM60J/conecta-postinfo.png",
+      "https://i.postimg.cc/yNDTzFnT/conecta-profileinfo.png",
+    ],
+    repository: [
+      "https://github.com/cpasquali/Conecta-FrontEnd",
+      "https://github.com/cpasquali/Conecta-BackEnd",
+      ,
+    ],
     technologies: ["React", "Tailwind", "expressjs", "MySql"],
     resume: `Conecta es un proyecto orientado al desarrollo full stack que simula una red social moderna. Permite a los usuarios registrarse, iniciar sesión, crear publicaciones con fotos, comentar, dar “like” y seguir a otros perfiles.
 Incluye una barra de búsqueda para encontrar usuarios fácilmente y opciones para editar datos de la cuenta o eliminarla de forma segura.

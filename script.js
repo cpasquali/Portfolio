@@ -17,8 +17,8 @@ const renderProjects = () => {
         <img onclick="location.href='project-info.html?name=${
           projects.name
         }'" class="projects-image" src="${
-        projects.image
-      }  " alt="foto de projectso ${projects.name} ">
+        projects.images[0]
+      }  " alt="foto de projectso ${projects.name} "/>
       <div class="card-info">
       <h2>${projects.name}</h2>
       <div class="card-tec">
@@ -89,19 +89,3 @@ formEl.addEventListener("submit", async function (e) {
 window.addEventListener("load", () => {
   document.querySelector(".fade-in").classList.add("loaded");
 });
-
-const btnMobile = document.getElementById("btn-mobile");
-
-function toggleMenu() {
-  const menuEl = document.getElementById("menu");
-  const navEl = document.getElementById("nav");
-  if (menuEl.className.includes("active")) {
-    menuEl.classList.remove("active");
-    navEl.classList.remove("active");
-  } else {
-    menuEl.classList.add("active");
-    navEl.classList.add("active");
-  }
-}
-
-btnMobile.addEventListener("click", toggleMenu);
