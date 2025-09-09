@@ -24,9 +24,9 @@ const renderProjects = () => {
       <div class="card-tec">
         ${projects.technologies
           .map((tec) => {
-            return ` <img class="${
-              tec === "expressjs" && "background-image card"
-            }" src="./images/${imageTecnology(tec)}.png" alt="tailwind-logo"/>`;
+            return ` <img src="./images/${imageTecnology(
+              tec
+            )}.png" alt="tailwind-logo"/>`;
           })
           .join(" ")}
       </div>

@@ -38,9 +38,9 @@ const renderProject = () => {
       <section class="card-tec">
         ${project.technologies
           .map((tec) => {
-            return ` <img class="${
-              tec === "expressjs" && "background-image"
-            }" src="./images/${imageTecnology(tec)}.png" alt="tailwind-logo"/>`;
+            return ` <img src="./images/${imageTecnology(
+              tec
+            )}.png" alt="tailwind-logo"/>`;
           })
           .join(" ")}
       </section>
