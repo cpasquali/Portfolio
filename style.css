@@ -100,6 +100,10 @@ h2 {
   color: white;
 }
 
+.navbar-mobile {
+  display: none;
+}
+
 svg {
   width: 1.75rem;
 }
@@ -658,6 +662,54 @@ svg {
 
   .project-info-a {
     width: 100%;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    z-index: 99;
+  }
+
+  .navbar-mobile button {
+    background-color: transparent;
+    border: 1px solid white;
+    display: flex;
+    border-radius: 10px;
+    padding: 3px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .navbar-mobile button svg {
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    color: white;
+    pointer-events: none;
+  }
+
+  .menu-mobile {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: start;
+    gap: 3px;
+    justify-content: center;
+    top: 10px;
+    right: 40px;
+    background-color: #111;
+    width: 160px;
+  }
+
+  .menu-mobile.active {
+    display: flex;
   }
 }
 

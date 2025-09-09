@@ -89,3 +89,13 @@ formEl.addEventListener("submit", async function (e) {
 window.addEventListener("load", () => {
   document.querySelector(".fade-in").classList.add("loaded");
 });
+
+const btnNavbarEl = document.getElementById("btn-nav");
+const menuEl = document.getElementById("menu-mobile");
+btnNavbarEl.addEventListener("click", () => {
+  if (menuEl.className.includes("active")) {
+    menuEl.classList.remove("active");
+  } else {
+    menuEl.classList.add("active");
+  }
+});
