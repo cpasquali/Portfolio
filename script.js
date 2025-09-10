@@ -1,4 +1,71 @@
 import { projects } from "./data/projects.js";
+import { translations } from "./data/translations.js";
+
+let currentLang = localStorage.getItem("lang") || "es";
+const langEl = document.getElementById("lang");
+const langMobileEl = document.getElementById("lang-mobile");
+
+const changeLanguaje = (lang) => {
+  document
+    .querySelectorAll('a[href="#inicio"]')
+    .forEach((el) => (el.textContent = translations[lang].home));
+  document
+    .querySelectorAll('a[href="#sobre-mi"]')
+    .forEach((el) => (el.textContent = translations[lang].about));
+  document
+    .querySelectorAll('a[href="#projects"]')
+    .forEach((el) => (el.textContent = translations[lang].projects));
+  document
+    .querySelectorAll('a[href="#contact"]')
+    .forEach((el) => (el.textContent = translations[lang].contact));
+  document
+    .querySelectorAll('a[href="./docs/CV_Constantino_Pasquali.pdf"]')
+    .forEach((el) => (el.textContent = translations[lang].more));
+
+  langEl.textContent = translations[lang].lang;
+
+  document.querySelector(".initial-banner h1").textContent =
+    translations[lang].welcome;
+  document.querySelector(".initial-banner p").textContent =
+    translations[lang].intro;
+
+  document.querySelector(".about-me h2").textContent =
+    translations[lang].aboutTitle;
+  document.querySelector(".about-me-p.one").textContent =
+    translations[lang].aboutInfo1;
+  document.querySelector(".about-me-p.two").textContent =
+    translations[lang].aboutInfo2;
+
+  document.querySelector(".lenguaje-container h2").textContent =
+    translations[lang].lenguajesTitle;
+
+  document.querySelector(".projects-container h2").textContent =
+    translations[lang].projectsTitle;
+
+  document.querySelector(".contact h2").textContent =
+    translations[lang].contactTitle;
+  document.getElementById("labelName").textContent =
+    translations[lang].formName;
+  document.getElementById("labelSubject").textContent =
+    translations[lang].formSubject;
+  document.getElementById("labelMessage").textContent =
+    translations[lang].formMessage;
+  document.querySelector(".btn-form").textContent = translations[lang].sendBtn;
+};
+
+langEl.addEventListener("click", () => {
+  currentLang = currentLang === "es" ? "en" : "es";
+  localStorage.setItem("lang", currentLang);
+  changeLanguaje(currentLang);
+});
+
+langMobileEl.addEventListener("click", () => {
+  currentLang = currentLang === "es" ? "en" : "es";
+  localStorage.setItem("lang", currentLang);
+  changeLanguaje(currentLang);
+});
+
+changeLanguaje(currentLang);
 
 const imageTecnology = (tec) => {
   return tec.startsWith("Api")

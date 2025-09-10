@@ -1,7 +1,37 @@
 import { projects } from "./data/projects.js";
+import { translations } from "./data/translations.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const nameProject = urlParams.get("name");
+let currentLang = localStorage.getItem("lang") || "es";
+const langMobileEl = document.getElementById("lang-mobile");
+
+const langEl = document.getElementById("lang");
+const changeLanguaje = (lang) => {
+  langEl.textContent = translations[lang].lang;
+
+  document.querySelector('a[href="./index.html"]').textContent =
+    translations[lang].home;
+  document.querySelector(
+    'a[href="./docs/CV_Constantino_Pasquali.pdf"]'
+  ).textContent = translations[lang].more;
+};
+
+langEl.addEventListener("click", () => {
+  currentLang = currentLang === "es" ? "en" : "es";
+  localStorage.setItem("lang", currentLang);
+  changeLanguaje(currentLang);
+  renderProject();
+});
+
+langMobileEl.addEventListener("click", () => {
+  currentLang = currentLang === "es" ? "en" : "es";
+  localStorage.setItem("lang", currentLang);
+  changeLanguaje(currentLang);
+  renderProject();
+});
+
+changeLanguaje(currentLang);
 
 const imageTecnology = (tec) => {
   return tec.startsWith("Api")
@@ -33,8 +63,8 @@ const renderProject = () => {
     
     <section class="project-data">
       <h2>${project.name}</h2>
-      <p class="project-resume">${project?.resume}</p>
-      <h2>Tecnologias utilizadas</h2>
+      <p class="project-resume">${project?.resume[currentLang]}</p>
+      <h2>${translations[currentLang].projectTechnologies}</h2>
       <section class="card-tec">
         ${project.technologies
           .map((tec) => {
@@ -44,25 +74,25 @@ const renderProject = () => {
           })
           .join(" ")}
       </section>
-      <h2>Mira el proyecto</h2>
+      <h2>${translations[currentLang].viewProject}</h2>
       <div class="project-links">
       ${
         project.deploy
           ? `<a class="project-info-a deploy" href=${project.deploy} target="_blank" rel="noopener noreferrer">
-        🌐 Ver Deploy
+        🌐 ${translations[currentLang].deployBtn}
         </a>`
           : ""
       }
       ${
         project.repository.length > 1
           ? `<a class="project-info-a repository" href=${project.repository[0]} target="_blank" rel="noopener noreferrer">
-        <ion-icon name="logo-github"></ion-icon> Ver Código Frontend
+        <ion-icon name="logo-github"></ion-icon> ${translations[currentLang].ViewFrontendCode}
         </a> 
         <a class="project-info-a repository" href=${project.repository[1]} target="_blank" rel="noopener noreferrer">
-        <ion-icon name="logo-github"></ion-icon> Ver Código Backend
+        <ion-icon name="logo-github"></ion-icon> ${translations[currentLang].ViewBackendCode}
         </a>`
           : `<a class="project-info-a repository" href=${project.repository} target="_blank" rel="noopener noreferrer">
-        <ion-icon name="logo-github"></ion-icon> Ver Código
+        <ion-icon name="logo-github"></ion-icon> ${translations[currentLang].codeBtn}
         </a> `
       }
       </div>
