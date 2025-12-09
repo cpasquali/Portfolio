@@ -222,6 +222,7 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+  padding: 40px 0;
 }
 
 .lenguaje-container h3 {
@@ -236,6 +237,7 @@ svg {
   gap: 2.5rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  width: 80%;
 }
 
 .lenguajes img {
@@ -248,6 +250,8 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+  justify-self: center;
 }
 
 .projects-container h2 {
@@ -258,43 +262,55 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  justify-content: space-evenly;
-  height: 15.625rem;
-  width: 23.75rem;
-  padding-bottom: 18.75rem;
-  border-radius: 0.625rem;
-  cursor: pointer;
+  width: 340px;
+  height: 420px;
+  background-color: #0076b51f;
+  backdrop-filter: blur(0.2rem);
+  border-radius: 1.5rem;
+  border: 1px solid #0077b5;
+  position: relative;
 }
 
 .projects-card img {
-  height: 17.5rem;
-  width: 23.75rem;
+  width: 100%;
   object-fit: contain;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding-left: 10px;
   justify-content: center;
 }
 
 .card-info h2 {
   color: #ffffff;
-  font-size: 1.5rem;
+  text-align: start;
+  font-size: 1.3rem;
+  padding: 20px 0;
+  font-weight: 400;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .card-tec {
   display: flex;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: start;
+  gap: 10px;
 }
 
-.card-tec img {
-  height: 3.125rem;
-  width: 3.125rem;
-  object-fit: contain;
-  margin-top: 0.625rem;
+.lenjuage-card.project {
+  color: rgb(0, 119, 181);
+  font-weight: 600;
+  font-size: 14px;
+  height: 40px;
 }
 
 .btn-mobile {
@@ -316,12 +332,23 @@ svg {
   justify-content: center;
   margin-top: 0.625rem;
   gap: 1.25rem;
+  position: absolute;
+  bottom: 10px;
 }
 
 .btn-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   text-decoration: none;
   color: white;
-  font-size: 1.75rem;
+  background: rgba(30, 41, 59, 0.6);
+  height: 40px;
+  padding: 10px;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
 }
 
 .contact {
@@ -736,4 +763,92 @@ svg {
 
 #btn-mobile {
   color: white;
+}
+
+.technologies {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 1px solid #0077b5;
+  background-color: #0076b51f;
+  border-radius: 1.5rem;
+  padding: 2rem 2rem;
+  width: 350px;
+  height: 330px;
+  backdrop-filter: blur(0.2rem);
+}
+
+.technologies h2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f1f5f9;
+  margin: 0 0 2rem 0;
+}
+
+.technologies h2 > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 0.75rem;
+  color: #0077b5;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.technologies > section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.lenjuage-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: 50px;
+  padding: 0 1rem;
+  width: auto;
+  white-space: nowrap;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.lenjuage-card svg {
+  width: 24px;
+  height: 24px;
+}
+.lenjuage-card:hover {
+  background: rgba(51, 65, 85, 0.8);
+  border-color: rgba(148, 163, 184, 0.5);
+  transform: translateY(-2px);
+}
+
+.lenjuage-card svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.lenjuage-card p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .projects-card {
+    width: 300px;
+  }
 }

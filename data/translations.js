@@ -20,7 +20,7 @@ export const translations = {
             la carrera como en cursos complementarios, aprendiendo y practicando
             con tecnologías como HTML, CSS, JavaScript, React, SQL Server,My
             SQL, C++, C#, Bootstrap y SASS.`,
-    lenguajesTitle: "LENGUAJES USADOS EN MIS PROYECTOS",
+    lenguajesTitle: "TECNOLOGIAS",
     projectsTitle: "MIS PROYECTOS",
     contactTitle: "CONTACTAME",
     formName: "Nombre",
@@ -31,8 +31,6 @@ export const translations = {
     viewProject: "Mira el proyecto",
     deployBtn: "Ver Deploy",
     codeBtn: "Ver Codigo",
-    ViewFrontendCode: "Ver Código Frontend",
-    ViewBackendCode: "Ver Código Backend",
   },
   en: {
     home: "Home",
@@ -54,7 +52,7 @@ export const translations = {
             studies and from additional courses, learning and practicing
             technologies such as HTML, CSS, JavaScript, React, SQL Server, MySQL,
             C++, C#, Bootstrap, and SASS.`,
-    lenguajesTitle: "LANGUAGES USED IN MY PROJECTS",
+    lenguajesTitle: "TECHNOLOGIES",
     projectsTitle: "MY PROJECTS",
     contactTitle: "CONTACT ME",
     formName: "Name",
@@ -65,7 +63,5 @@ export const translations = {
     viewProject: "Look at the project",
     deployBtn: "View Deploy",
     codeBtn: "View Code",
-    ViewFrontendCode: "View Frontend Code",
-    ViewBackendCode: "View Backend Code",
   },
 };

@@ -67,53 +67,42 @@ langMobileEl.addEventListener("click", () => {
 
 changeLanguaje(currentLang);
 
-const imageTecnology = (tec) => {
-  return tec.startsWith("Api")
-    ? "api"
-    : tec.includes(".js")
-    ? "Java-Script"
-    : tec;
-};
-
 const renderProjects = () => {
   const projectsSectionEl = document.getElementById("projects");
-  let projectsCard = projects
-    .map((projects) => {
-      return `
+  let projectsCards = projects.map(projectCard).join(" ");
+  projectsSectionEl.innerHTML = projectsCards;
+};
+
+const projectCard = (project) => {
+  return `
       <article class="projects-card">
-        <img onclick="location.href='project-info.html?name=${
-          projects.name
-        }'" class="projects-image" src="${
-        projects.images[0]
-      }  " alt="foto de projectso ${projects.name} "/>
+        <img class="projects-image" src="${
+          project.image
+        }  " alt="foto de projectso ${project.name} "/>
       <div class="card-info">
-      <h2>${projects.name}</h2>
-      <div class="card-tec">
-        ${projects.technologies
+        <h2>${project.name}</h2>
+        <div class="card-tec">
+        ${project.technologies
           .map((tec) => {
-            return ` <img src="./images/${imageTecnology(
-              tec
-            )}.png" alt="tailwind-logo"/>`;
+            return `<p class="lenjuage-card project">${tec}</p>`;
           })
           .join(" ")}
-      </div>
-        <div class="btn-card-container">
-          <a href="${
-            projects.repository
-          }" class="btn-card" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-          ${
-            projects.hasOwnProperty("deploy")
-              ? `<a href="${projects.deploy}" class="btn-card" target="_blank"><ion-icon name="globe-outline"></ion-icon
-                ></a>`
-              : ""
-          }
         </div>
-      </div>
+          <div class="btn-card-container">
+                    ${
+                      project.hasOwnProperty("deploy")
+                        ? `<a href="${project.deploy}" class="btn-card" target="_blank"><ion-icon name="globe-outline"></ion-icon
+                >Visitar</a>`
+                        : ""
+                    }
+          <a href="${
+            project.repository
+          }" class="btn-card" target="_blank"><ion-icon name="logo-github"></ion-icon> Repositorio</a>
+
+          </div>
+        </div>
       </article> 
   `;
-    })
-    .join(" ");
-  projectsSectionEl.innerHTML = projectsCard;
 };
 
 renderProjects();
@@ -166,3 +155,7 @@ btnNavbarEl.addEventListener("click", () => {
     menuEl.classList.add("active");
   }
 });
+
+const menuDesktopEl = document.getElementById("menu");
+
+menuDesktopEl.addEventListener("click", (e) => {});
