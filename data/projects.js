@@ -35,15 +35,22 @@ export const projects = [
   {
     name: "Musical Instrument Simulator",
     image: "https://i.postimg.cc/Kv3LzqFC/Musical-Instrument-Simulator.jpg",
-    repository: ["https://github.com/cpasquali/Musical-instrument-simulator"],
+    repository: "https://github.com/cpasquali/Musical-instrument-simulator",
     technologies: ["React", "CSS", "Tone.js"],
     deploy: "https://musical-instrument-simulator.vercel.app/",
   },
   {
     name: "Landing Spotify",
     image: "https://i.postimg.cc/JhxHgScH/Landing-Spotify.jpg",
-    repository: ["https://github.com/cpasquali/Landing-Spotify"],
+    repository: "https://github.com/cpasquali/Landing-Spotify",
     technologies: ["HTML", "CSS"],
     deploy: "https://landing-spotify.vercel.app/",
+  },
+  {
+    name: "Tres en Raya",
+    image: "https://i.postimg.cc/t47yzYVZ/tic-tac-toe.jpg",
+    repository: "https://github.com/cpasquali/tres-en-raya",
+    technologies: ["React", "CSS"],
+    deploy: "https://tres-en-raya-beige.vercel.app/",
   },
 ];
